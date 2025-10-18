@@ -10,7 +10,7 @@ admin.initializeApp({
 const db = admin.database();
 
 async function resetBoosts() {
-  const usersRef = db.ref("/");
+  const usersRef = db.ref("/users");
   const snapshot = await usersRef.once("value");
 
   if (!snapshot.exists()) {
